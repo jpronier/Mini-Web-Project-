@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Authentification</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1 class="navbar">
+            <li class="BDSF">BDSF</li>
+            <li><a href="authentification.php">Connexion</a></li>
+            <li><a href="inscription.php">Inscription</a></li>
+            <li><a href="ajout_suggestion.php">Suggérer un nouveau livre</a></li>
+            <input class="searchBar" type="text" placeholder="Rechercher..">
+        </h1>
+
+        <h1 class="titre_authentification">Authentification</h1>
+
+        <form method = "post" action="connexion.php">
+            <fieldset class="form">
+                <legend>Etes-vous membre de BDSF ?</legend>
+                <label for='identifiant'>Entrer votre identifiant : </label>
+                <input type='email' name="identifiant" id='identifiant' required size='30'>
+
+                <label for='mdp'>Entrer votre mot de passe : </label>
+                <input type='password' name="mdp" id='mdp' required size='30'>
+                
+                <p>
+                <input class="button_authen" type="submit" value="Connexion"/>
+                </p>
+            </fieldset>
+        </form>
+        <form method = "post" action="sanscompte.php">
+            <fieldset class="form_pasdecompte">
+                <input class="button_authen" type="submit" value="Continuer sans compte"/>
+            </fieldset>
+        </form>
+        <form method = "post" action="inscription.php">
+            <fieldset class="form_pasdecompte">
+                <input class="button_authen" type="submit" value="Inscription"/>
+            </fieldset>
+        </form>
+    </body>
+</html>

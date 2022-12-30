@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Suggestion d'ajout à la bibliotèque</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1 class="navbar">
+            <li class="BDSF">BDSF</li>
+            <li><a href="authentification.php">Connexion</a></li>
+            <li><a href="inscription.php">Inscription</a></li>
+            <li><a href="ajout_suggestion.php">Suggérer un nouveau livre</a></li>
+            <input class="searchBar" type="text" placeholder="Rechercher..">
+        </h1>
+        <h1 class="titre_sugg">Quel nouveau livre voudriez-vous voir dans la bibliothèque ?</h1>
+        <h2 class="intro">Il est dans l'ADN de tout lecteur que de vouloir acquérir de nouveaux livres pour étoffer
+             des étagères déjà surchargées. A BDSF, nous ne faisons pas exception à la règle. Mais dans 
+             notre grande bonté, on vous autorise à faire des suggestions quant aux petits nouveaux 
+             de la bibliotèque. Alors, des idées ?</h2>
+        <form action="ajout_suggestion.php" method="post" >
+            <fieldset class="form">
+                <legend>Le Livre</legend>
+                <label>Titre du livre : </label>
+                <input type="text" name="titre" id="titre" >
+
+                <p class="question">Fait-il partie d'une saga ?</p>
+                <label>Nom de la saga : </label>
+                <input type="text" name="saga" id="saga" >
+                <label>Numéro du tome : </label>
+                <input class="last_input" type="number" name="tome" id="tome">
+            </fieldset>
+            <fieldset class="form">
+                <legend>L'Auteur</legend>
+                <label>Nom : </label>
+                <input type="text" name="nom" id="nom" >
+
+                <label>Prénom : </label>
+                <input type="text" name="prenom" id="prenom" >
+
+                <label>Nom de plume : </label>
+                <input class="last_input" type="text" name="nomdeplume" id="nomdeplume" >
+            </fieldset>
+            <p class="envoi_sugg">A quel point désires-tu ce livre ?
+                <select> 
+                    <option></option>
+                    <option>Un peu</option>
+                    <option>Beaucoup</option>
+                    <option>Passionnément</option>
+                    <option>A la folie</option>
+                    <option>Pas du tout (je suis une personne contradictoire)</option>
+                </select>
+            </p>
+            <p class="envoi_sugg"><input class="button_sugg" type="submit" value="Envoyer"/></p>
+        </form>
+    </body>
+</html>
